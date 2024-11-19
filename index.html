@@ -3,9 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultant</title>
+    <title>Consultancy Firm | Expert Business Consulting</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Speaker</h1>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="#hero" class="logo">Consultancy Firm</a>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h1>Expert Consulting for Business Growth</h1>
+      <p>Your partner in driving innovation, strategy, and success.</p>
+      <button onclick="scrollToSection('contact')">Get Started</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <h3>Business Strategy</h3>
+          <p>
+            Helping you define a clear path to success with expert insights.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Financial Consulting</h3>
+          <p>Guidance to optimize your financial performance.</p>
+        </div>
+        <div class="service-card">
+          <h3>Market Analysis</h3>
+          <p>Data-driven market insights for a competitive edge.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div id="testimonial-cards">
+        <div id="testimonial-card" class="testimonial-card">
+          <h3 id="testimonial-name">Sarah Lee</h3>
+          <p id="testimonial-feedback">
+            "This consulting firm transformed our business strategy and helped
+            us exceed our goals."
+          </p>
+        </div>
+        <div class="controls">
+          <button onclick="prevTestimonial()">Previous</button>
+          <button onclick="nextTestimonial()">Next</button>
+          <button onclick="togglePause()" id="pause-btn">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
